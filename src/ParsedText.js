@@ -17,7 +17,7 @@ const defaultParseShape = PropTypes.shape({
 
 const customParseShape = PropTypes.shape({
   ...ReactNative.Text.propTypes,
-  pattern: PropTypes.oneOfType(PropTypes.string, PropTypes.instanceOf(RegExp)]).isRequired,
+  pattern: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(RegExp)]).isRequired,
 });
 
 class ParsedText extends React.Component {
